@@ -1,0 +1,25 @@
+3. Write an SQL statement to create a table named jobs including columns
+job_id, job_title, min_salary, max_salary and check whether the
+max_salary amount exceeding the upper limit 25000. Also set job_id as
+primary key and entering null values for job_title is not allowed.
+
+
+Answer ->
+
+mysql> create table jobs ( jobs_id int primary key,
+    -> job_title varchar(100) not null,
+    -> min_salary decimal(10,2),
+    -> max_salary decimal(10,2) check (max_salary <= 25000)
+    -> );
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> desc jobs;
++------------+---------------+------+-----+---------+-------+
+| Field      | Type          | Null | Key | Default | Extra |
++------------+---------------+------+-----+---------+-------+
+| jobs_id    | int           | NO   | PRI | NULL    |       |
+| job_title  | varchar(100)  | NO   |     | NULL    |       |
+| min_salary | decimal(10,2) | YES  |     | NULL    |       |
+| max_salary | decimal(10,2) | YES  |     | NULL    |       |
++------------+---------------+------+-----+---------+-------+
+4 rows in set (0.00 sec)

@@ -1,0 +1,101 @@
+Entities and Attributes
+1. Customer
+
+CustomerID (Primary Key)
+
+Name
+
+Email (Unique)
+
+Phone
+
+Password
+
+2. Room
+
+RoomID (Primary Key)
+
+RoomType (Basic / Luxury)
+
+RentPerDay
+
+Status (Available / Booked)
+
+3. Booking
+
+BookingID (Primary Key)
+
+CustomerID (Foreign Key)
+
+RoomID (Foreign Key)
+
+CheckInDate
+
+CheckOutDate
+
+TotalRoomCost
+
+4. Service
+
+ServiceID (Primary Key)
+
+ServiceName (Food, Laundry, Site Visit)
+
+ServiceType (String / Enum)
+
+5. FoodOrder
+
+FoodOrderID (Primary Key)
+
+BookingID (Foreign Key)
+
+ItemName
+
+Quantity
+
+PricePerItem
+
+TotalPrice
+
+6. Laundry
+
+LaundryID (Primary Key)
+
+BookingID (Foreign Key)
+
+NoOfClothes
+
+TotalCost (Rs 20 per cloth)
+
+7. SiteVisit
+
+VisitID (Primary Key)
+
+BookingID (Foreign Key)
+
+VehicleType
+
+Days
+
+RatePerDay
+
+TotalCost
+
+8. Invoice
+
+InvoiceID (Primary Key)
+
+BookingID (Foreign Key)
+
+RoomCost
+
+FoodCost
+
+LaundryCost
+
+SiteVisitCost
+
+TotalAmount
+
+GeneratedDate
+

@@ -1,0 +1,52 @@
+8. Write an SQL statement to create a table employees including columns
+employee_id, first_name, last_name, email, phone_number hire_date, job_id,
+salary, commission, manager_id and department_id and make sure that, the
+employee_id column does not contain any duplicate value at the time of
+insertion and the foreign key columns combined by department_id and
+manager_id columns contain only those unique combination values, which
+combinations are exists in the departments table.
+
+answer->
+
+mysql> CREATE TABLE departments (
+    ->     department_id INT,
+    ->     manager_id    INT,
+    ->     dept_name     VARCHAR(100),
+    ->     CONSTRAINT pk_dept_mgr PRIMARY KEY (department_id, manager_id));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> CREATE TABLE employees (
+    ->     employee_id    INT PRIMARY KEY,
+    ->     first_name     VARCHAR(50),
+    ->     last_name      VARCHAR(50),
+    ->     email          VARCHAR(100),
+    ->     phone_number   VARCHAR(20),
+    ->     hire_date      DATE,
+    ->     job_id         INT,
+    ->     salary         DECIMAL(10,2),
+    ->     commission     DECIMAL(5,2),
+    ->     manager_id     INT,
+    ->     department_id  INT,
+    ->
+    ->     CONSTRAINT fk_dept_mgr
+    ->         FOREIGN KEY (department_id, manager_id)
+    ->         REFERENCES departments(department_id, manager_id));
+Query OK, 0 rows affected (0.09 sec)
+
+mysql> desc employees;
++---------------+---------------+------+-----+---------+-------+
+| Field         | Type          | Null | Key | Default | Extra |
++---------------+---------------+------+-----+---------+-------+
+| employee_id   | int           | NO   | PRI | NULL    |       |
+| first_name    | varchar(50)   | YES  |     | NULL    |       |
+| last_name     | varchar(50)   | YES  |     | NULL    |       |
+| email         | varchar(100)  | YES  |     | NULL    |       |
+| phone_number  | varchar(20)   | YES  |     | NULL    |       |
+| hire_date     | date          | YES  |     | NULL    |       |
+| job_id        | int           | YES  |     | NULL    |       |
+| salary        | decimal(10,2) | YES  |     | NULL    |       |
+| commission    | decimal(5,2)  | YES  |     | NULL    |       |
+| manager_id    | int           | YES  |     | NULL    |       |
+| department_id | int           | YES  | MUL | NULL    |       |
++---------------+---------------+------+-----+---------+-------+
+11 rows in set (0.00 sec)

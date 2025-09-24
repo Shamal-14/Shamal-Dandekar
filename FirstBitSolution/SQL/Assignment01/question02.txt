@@ -1,0 +1,19 @@
+question 2. Write an SQL statement to create a simple table countries including columns
+country_id,country_name and region_id.
+
+answer->
+
+mysql> create table countries (country_id int(11),
+    -> country_name varchar(20),
+    -> region_id int(11));
+Query OK, 0 rows affected, 2 warnings (0.12 sec)
+
+mysql> desc countries;
++--------------+-------------+------+-----+---------+-------+
+| Field        | Type        | Null | Key | Default | Extra |
++--------------+-------------+------+-----+---------+-------+
+| country_id   | int         | YES  |     | NULL    |       |
+| country_name | varchar(20) | YES  |     | NULL    |       |
+| region_id    | int         | YES  |     | NULL    |       |
++--------------+-------------+------+-----+---------+-------+
+3 rows in set (0.03 sec)
