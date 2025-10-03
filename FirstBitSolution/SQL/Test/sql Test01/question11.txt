@@ -1,0 +1,8 @@
+Question no.11:11. What does the following query return?
+SELECT COUNT(*) FROM Employees;
+a) The total number of employees
+b) The sum of salaries of employees
+c) The first record of the table
+d) An error message
+
+Answer: a

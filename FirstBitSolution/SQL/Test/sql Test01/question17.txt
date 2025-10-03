@@ -1,0 +1,14 @@
+Question no.17: 17. Question:
+You have two tables:
+• Books with columns: book_id, author_id, title, price.
+• Sales with columns: sale_id, book_id, sale_date, quantity.
+• O/P- author_id | total_books_sold
+
+Write an SQL query to find the total number of books sold by each author. Only include authors
+who have sold more than 100 books.
+
+Answer:mysql> select b.author_id, sum(s.quantity) as total_books_sold
+    -> from books b
+    -> join sales s on b.book_id = s.book_id
+    -> group by b.author_id
+    -> having sum(s.quantity) > 100;

@@ -1,0 +1,7 @@
+Question no.9:. Write an SQL query to find the total number of orders placed in each month, considering only
+those months where more than 100 orders were placed.
+Answer:
+mysql> select month(order_date) as order_month, count(*) as total_orders
+    -> from orders
+    -> group by month(order_date)
+    -> having count(*) > 100;

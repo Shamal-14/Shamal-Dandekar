@@ -1,0 +1,16 @@
+Question no.3:3. Fetch employee records from the `Employees` table, skipping the first 3 records and showing
+the next 5 records.
+
+Answer: mysql> select *
+    -> from employees
+    -> limit 5 offset 3;
++--------+------------+-----------+-------------+-------------------------------+--------------+---------------------+
+| emp_id | first_name | last_name | department  | email                         | joining_date | address             |
++--------+------------+-----------+-------------+-------------------------------+--------------+---------------------+
+|      4 | shamal     | NULL      | NULL        | NULL                          | NULL         | NULL                |
+|      5 | shamal     | dandekar  | HR          | shamaldandekar@gmail.com      | NULL         | NULL                |
+|      6 | shamal     | NULL      | HR          | @sd@gmail.com                 | NULL         | NULL                |
+|      7 | Shamal     | Patil     | Engineering | shamal.patil@example.com      | 2022-05-15   | Pune, Maharashtra   |
+|      8 | Yatharth   | Deshmukh  | Marketing   | yatharth.deshmukh@example.com | 2021-08-20   | Mumbai, Maharashtra |
++--------+------------+-----------+-------------+-------------------------------+--------------+---------------------+
+5 rows in set (0.00 sec)

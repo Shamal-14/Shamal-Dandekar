@@ -1,0 +1,9 @@
+SQL TEST 1 (SET A)
+Name:Shamal Dandekar
+FRN-16J0825/010
+
+Question no.1:
+
+Answer: mysql> select name, salary
+    -> from employees
+    -> order by salary desc;

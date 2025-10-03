@@ -1,0 +1,8 @@
+Question no.5: 5. Fetch the department-wise average salary from the `Employees` table, only for departments
+where the average salary is greater than 50,000.
+Answer:
+
+mysql> select department_id, avg(salary) as avg_salary
+    -> from employees
+    -> group by department_id
+    -> having avg(salary) > 50000;

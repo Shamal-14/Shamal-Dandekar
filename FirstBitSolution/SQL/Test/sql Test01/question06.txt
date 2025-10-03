@@ -1,0 +1,5 @@
+Question no.6: 6. Retrieve a list of products from the `Products` table where the product name contains the word
+"Laptop" .
+ Answer: mysql> select *
+    -> from products
+    -> where product_name like '%laptop%';

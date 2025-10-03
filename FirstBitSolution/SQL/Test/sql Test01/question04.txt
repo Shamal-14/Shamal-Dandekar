@@ -1,0 +1,5 @@
+Question no.4:4. Write a query to count the number of employees in each department from the `Employees`
+table.
+Answer: mysql> select department_id, count(*) as employee_count
+    -> from employees
+    -> group by department_id;

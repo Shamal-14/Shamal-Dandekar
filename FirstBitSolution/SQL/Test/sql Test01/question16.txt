@@ -1,0 +1,14 @@
+Question no. 16: 16. Question:
+You have two tables:
+• Orders with columns: order_id, customer_id, order_date, total_amount.
+• Customers with columns: customer_id, region.
+• O/P- region | total_orders
+Write an SQL query to find the total order amount (total_amount) for each region. Only include
+regions where the total order amount is greater than 10000
+
+
+Answer: select c.region, sum(o.total_amount) as total_orders
+from orders o
+join customers c on o.customer_id = c.customer_id
+group by c.region
+having sum(o.total_amount) > 10000;

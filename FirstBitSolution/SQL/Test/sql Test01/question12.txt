@@ -1,0 +1,8 @@
+Quetion no.12:12. What will be the output of the following query?
+SELECT LENGTH('Database');
+a) 9
+b) 8
+c) 10
+d) Error
+
+Anwer: b

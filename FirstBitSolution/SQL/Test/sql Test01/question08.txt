@@ -1,0 +1,5 @@
+Question no.8: 8. Fetch only those students from the `Students` table whose names start with the letter "A".
+
+Answer:mysql> select *
+    -> from students
+    -> where student_name like 'A%';
