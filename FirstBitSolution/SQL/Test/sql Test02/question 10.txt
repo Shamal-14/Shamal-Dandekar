@@ -1,0 +1,2 @@
+10. All roles played by actors in movie with ID 3
+answer: select role from roles where m_id = 3;

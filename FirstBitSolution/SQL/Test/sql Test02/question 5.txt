@@ -1,0 +1,2 @@
+5. Find the actor who is not Indian
+Answer: select *from actors where nationality!='indian';

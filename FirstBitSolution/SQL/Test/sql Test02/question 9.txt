@@ -1,0 +1,2 @@
+9. Count of actors by gender
+answer : select gender, count(*) as total from actors group by gender;

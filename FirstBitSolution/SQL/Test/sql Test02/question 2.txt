@@ -1,0 +1,3 @@
+2.Display movies in descending order of rating
+
+answer: select * from movies order by IMDB_rating desc;

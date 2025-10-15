@@ -1,0 +1,4 @@
+6. Number of actors worked in each movie
+Answer: select m_id, count(a_id) as actor_count
+from roles
+group by m_id;

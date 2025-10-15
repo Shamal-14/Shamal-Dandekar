@@ -1,0 +1,2 @@
+8. Movie with lowest total budget
+answer: select* from movies order by t_budget asc limit 1;

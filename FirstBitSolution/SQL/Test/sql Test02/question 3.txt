@@ -1,0 +1,2 @@
+3. Names of male actors who received more than 10 awards
+Answer: select name from actors where gender='male'&& no_of_award>10;

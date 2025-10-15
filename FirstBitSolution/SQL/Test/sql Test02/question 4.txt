@@ -1,0 +1,2 @@
+4. Roles and movie IDs for actor with actor id 101
+Answer : select role,m_id from roles where a_id=101;

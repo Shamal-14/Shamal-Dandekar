@@ -1,0 +1,6 @@
+. Role played by ‘Amir Khan’ in 3 Idiots
+answer:select r.role
+from roles r
+join actors a on r.a_id = a.act_id
+join movies m ON r.m_id = m.m_id
+where a.name = 'Amir Khan' and m.name = '3 idiots';
