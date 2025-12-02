@@ -41,7 +41,7 @@ Environment: Console/Terminal
 
 ▶️ How to Run the Program
 1. Clone the Repository
-git clone https://github.com/Shamal-Dandekar/FirstBitSolution
+git https://github.com/Shamal-14/Shamal-Dandekar/edit/main/FirstBitSolution/C_Programming/Project
 
 2. Navigate to the Project Folder
 cd FirstBitSolution/C_Programming/Project
